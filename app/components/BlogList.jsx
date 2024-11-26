@@ -3,12 +3,11 @@ import { blog_data } from "../Assets/assets";
 import BlogItem from "./BlogItem";
 
 const BlogList = () => {
-  // Set the initial menu state to "All"
   const [menu, setMenu] = useState("All");
 
   useEffect(() => {
-    console.log(menu); // Log the value of menu to see if it's updating
-  }, [menu]); // This will run whenever the menu state changes
+    console.log(menu);
+  }, [menu]);
 
   return (
     <div>
@@ -60,6 +59,7 @@ const BlogList = () => {
             return (
               <BlogItem
                 key={index}
+                id={item.id}
                 image={item.image}
                 title={item.title}
                 description={item.description}
